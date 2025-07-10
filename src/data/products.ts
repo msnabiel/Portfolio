@@ -21,7 +21,7 @@ export const products: Product[] = [
     price: "9.99",
     originalPrice: "19.99",
     downloadLink: "/downloads/resume-builder.zip",
-    thumbnail: "/images/resume-thumb.png",
+    thumbnail: "/flood.png",
     rating: 4.8,
     reviews: 156,
     category: "Productivity",

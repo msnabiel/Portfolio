@@ -23,7 +23,8 @@ interface Props {
   links?: readonly {
     icon: React.ReactNode;
     type: string;
-    href: string;
+    href?: string;
+    onClick?: (e: React.MouseEvent) => void;
   }[];
   className?: string;
 }
@@ -41,11 +42,7 @@ export function ProjectCard({
   className,
 }: Props) {
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
+    <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
       <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
@@ -57,7 +54,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {image && (
@@ -70,6 +67,7 @@ export function ProjectCard({
           />
         )}
       </Link>
+      
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
@@ -82,6 +80,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
+      
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
@@ -97,17 +96,50 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
+      
       <CardFooter className="px-2 pb-2">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+            {links.map((link, idx) =>
+              link.href ? (
+                <Link
+                  href={link.href}
+                  key={idx}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Badge className="flex gap-2 px-2 py-1 text-[10px]">
+                    {link.icon}
+                    {link.type}
+                  </Badge>
+                </Link>
+              ) : (
+                <button
+                  key={idx}
+                  onClick={(e) => {
+                    // Prevent event from bubbling up to parent Link
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Debug logging
+                    console.log('Button clicked:', link.type);
+                    console.log('onClick function:', link.onClick);
+                    
+                    // Call the onClick handler if it exists
+                    if (link.onClick) {
+                      link.onClick(e);
+                    } else {
+                      console.warn('No onClick handler provided for:', link.type);
+                    }
+                  }}
+                  className="px-2 py-1 text-xs flex items-center gap-2 bg-muted border rounded-md hover:bg-muted/80 transition-colors active:bg-muted/60"
+                  type="button"
+                >
                   {link.icon}
                   {link.type}
-                </Badge>
-              </Link>
-            ))}
+                </button>
+              )
+            )}
           </div>
         )}
       </CardFooter>

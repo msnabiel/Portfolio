@@ -25,7 +25,8 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/shop", icon: ShoppingCart, label: "Play" },
+    { href: "/shop", icon: ShoppingCart, label: "Shop" },
+    { href: "/cart", icon: ShoppingBag, label: "Cart" },
   ],
   contact: {
     email: "msyednabiel@gmail.com",

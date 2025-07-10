@@ -72,46 +72,47 @@ export default function ProductPage() {
     )
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="max-w-screen-lg mx-auto py-0 px-2 space-y-8">
-        {/* Back Button */}
-        <Button 
-  variant="ghost" 
-  onClick={() => router.back()}
-  className="hover:bg-muted mb-4 pl-0"
->
-  <ArrowLeft className="w-4 h-4 mr-2" />
-  Back to Products
-</Button>
-
-{/* Hero Section */}
-<Card className="overflow-hidden shadow border bg-card">
-  <CardContent className="p-4 sm:p-6">
-    <div className="space-y-4 sm:space-y-0 sm:flex sm:gap-6">
-{/* Product Image */}
-<div className="relative group sm:w-1/2">
-  <div className="h-full w-full rounded-xl overflow-hidden bg-gradient-to-br from-muted/50 to-muted shadow relative min-h-[200px] sm:min-h-0">
-    <img
-      src={product.thumbnail}
-      alt={product.name}
-      className={`w-full h-full object-cover transition-all duration-700 ${
-        imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
-      }`}
-      onLoad={() => setImageLoaded(true)}
-    />
-    {!imageLoaded && (
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="animate-spin rounded-full h-10 w-10 border-2 border-t-transparent border-primary" />
-      </div>
-    )}
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="max-w-screen-lg mx-auto py-0 px-2 space-y-4">
+        <div className="mb-2">
+    <Button 
+      variant="ghost" 
+      onClick={() => router.back()}
+      className="hover:bg-muted pl-0"
+    >
+      <ArrowLeft className="w-4 h-4 mr-2" />
+      Back to Products
+    </Button>
   </div>
 
-  {/* Premium Tag */}
-  <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-0.5 rounded-full text-xs font-medium shadow">
-    Premium
-  </div>
-</div>
+    {/* Hero Section */}
+    <Card className="overflow-hidden shadow border bg-card">
+    <CardContent className="p-4 sm:p-6">
+        <div className="space-y-4 sm:space-y-0 sm:flex sm:gap-6">
+    {/* Product Image */}
+    <div className="relative group sm:w-1/2">
+    <div className="h-full w-full rounded-xl overflow-hidden bg-gradient-to-br from-muted/50 to-muted shadow relative min-h-[200px] sm:min-h-0">
+        <img
+        src={product.thumbnail}
+        alt={product.name}
+        className={`w-full h-full object-cover transition-all duration-700 ${
+            imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
+        }`}
+        onLoad={() => setImageLoaded(true)}
+        />
+        {!imageLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="animate-spin rounded-full h-10 w-10 border-2 border-t-transparent border-primary" />
+        </div>
+        )}
+    </div>
+
+    {/* Premium Tag */}
+    <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-0.5 rounded-full text-xs font-medium shadow">
+        Premium
+    </div>
+    </div>
 
       {/* Product Info */}
       <div className="sm:w-1/2 flex flex-col justify-between space-y-4">
