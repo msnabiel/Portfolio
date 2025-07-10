@@ -1,7 +1,7 @@
 "use client"
 import BlurFade from "@/components/magicui/blur-fade";
 import { Code2, Code2Icon, Download, GitBranchIcon, GitBranchPlus, IndianRupee, IndianRupeeIcon, LucideDownloadCloud, LucideShoppingCart, ShoppingBasketIcon, ZapIcon } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -49,6 +49,7 @@ export default function ShopPage() {
 const [open, setOpen] = useState(false)
 const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 const [search, setSearch] = useState("")
+const [addedProductId, setAddedProductId] = useState<number | null>(null)
 const filteredProducts = products.filter(
  (product) =>
 product.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -64,8 +65,10 @@ const handleAddToCart = (product: Product) => {
   console.log('🛒 addToCart function:', addToCart);
   
   try {
-    const result = addToCart(product);
-    console.log('🛒 addToCart result:', result);
+    addToCart(product)
+    setAddedProductId(product.id)
+    setTimeout(() => setAddedProductId(null), 1200) // Animation duration
+    //console.log('🛒 addToCart result:', result);
     console.log('✅ Successfully added to cart!');
   } catch (error) {
     console.error('❌ Error adding to cart:', error);
@@ -118,13 +121,19 @@ href: `/shop/${product.id}`,
 icon: <DownloadCloud className="size-3" />,
  },
  {
-type: "Add to Cart",
-icon: <ShoppingCart className="size-3" />,
+type: addedProductId === product.id ? "Added!" : "Add to Cart",
+icon: addedProductId === product.id
+? <ShoppingCart className="size-3 animate-bounce text-green-600" />
+: <ShoppingCart className="size-3" />,
 onClick: (e) => {
   console.log('🔥 Button clicked - event:', e);
   handleAddToCart(product);
 },
- },
+className: addedProductId === product.id
+? "bg-green-100 text-green-700 border-green-400 animate-pulse"
+: "",
+disabled: addedProductId === product.id,
+},
  ]}
 />
 </BlurFade>

@@ -25,8 +25,11 @@ interface Props {
     type: string;
     href?: string;
     onClick?: (e: React.MouseEvent) => void;
+      className?: string;
+  disabled?: boolean;
   }[];
   className?: string;
+  
 }
 
 export function ProjectCard({
