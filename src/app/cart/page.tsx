@@ -38,7 +38,7 @@ export default function CartPage() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-3xl mx-auto pt-4 space-y-6 px-4"
+      className="max-w-3xl mx-auto pt-4 pb-16 space-y-6 px-4"
     >
       <h1 className="text-3xl font-bold text-center">🛒 Your Cart</h1>
 
@@ -52,32 +52,34 @@ export default function CartPage() {
               exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="flex flex-col sm:flex-row justify-between p-4 gap-4 hover:shadow-md transition-shadow">
-                {/* Left side: image + details */}
-                <div className="flex gap-4 flex-1">
-                  <img
-                    src={product.thumbnail || "/placeholder.png"}
-                    alt={product.name || "Product Image"}
-                    className="w-16 h-16 object-cover rounded-md border"
-                  />
-                  <div className="space-y-1">
-                    <h2 className="font-medium text-lg">{product.name}</h2>
-                    <p className="text-sm text-muted-foreground">{product.description?.slice(0, 60)}...</p>
-                    <Badge variant="outline">{product.category}</Badge>
+              <Card className="p-4 hover:shadow-md transition-shadow">
+                <div className="flex flex-col sm:flex-row justify-between gap-4">
+                  {/* Left side: image + info */}
+                  <div className="flex gap-4 flex-1">
+                    <img
+                      src={product.thumbnail || "/placeholder.png"}
+                      alt={product.name || "Product Image"}
+                      className="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded-md border"
+                    />
+                    <div className="space-y-1">
+                      <h2 className="font-medium text-lg">{product.name}</h2>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{product.description?.slice(0, 60)}...</p>
+                      <Badge variant="outline">{product.category}</Badge>
+                    </div>
                   </div>
-                </div>
 
-                {/* Right side: price + remove */}
-                <div className="flex flex-col items-end justify-between gap-2">
-                  <p className="text-base font-semibold text-right">₹{product.price}</p>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="text-destructive hover:bg-destructive/10"
-                    onClick={() => removeFromCart(product.id)}
-                  >
-                    <Trash2 className="w-5 h-5" />
-                  </Button>
+                  {/* Right side: price + remove */}
+                  <div className="flex sm:flex-col sm:items-end justify-between sm:justify-between gap-2 sm:gap-3 text-left sm:text-end">
+                    <p className="text-base font-semibold sm:text-right">₹{product.price}</p>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="text-destructive hover:bg-destructive/10"
+                      onClick={() => removeFromCart(product.id)}
+                    >
+                      <Trash2 className="w-5 h-5" />
+                    </Button>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -89,17 +91,21 @@ export default function CartPage() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-4"
+        className="border-t pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
       >
-        <h2 className="text-xl font-semibold">
+        <h2 className="text-lg font-semibold">
           Total: <span className="text-primary">₹{total.toFixed(2)}</span>
         </h2>
-        <div className="flex gap-3">
-          <Button variant="destructive" onClick={clearCart}>
+        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+          <Button
+            variant="destructive"
+            className="w-full sm:w-auto"
+            onClick={clearCart}
+          >
             Clear Cart
           </Button>
-          <motion.div whileTap={{ scale: 0.95 }}>
-            <Button>
+          <motion.div whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+            <Button className="w-full sm:w-auto">
               Checkout
               <DownloadCloud className="w-4 h-4 ml-2" />
             </Button>
