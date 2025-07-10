@@ -74,12 +74,12 @@ export default function ProductPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="max-w-2xl mx-auto py-0 px-6 space-y-8">
+      <div className="max-w-4xl mx-auto py-0 px-6 space-y-8">
         {/* Back Button */}
         <Button 
   variant="ghost" 
   onClick={() => router.back()}
-  className="hover:bg-muted mb-4"
+  className="hover:bg-muted mb-4 pl-0"
 >
   <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Products
@@ -157,7 +157,7 @@ export default function ProductPage() {
             {product.github && (
               <Button
                 asChild
-                variant="outline"
+                variant="default"
                 size="sm"
                 className="hover:bg-slate-50 border-slate-200"
               >
@@ -176,7 +176,7 @@ export default function ProductPage() {
             )}
 
             <Button
-              variant="outline"
+              variant="default"
               size="sm"
               onClick={handleShare}
               className="hover:bg-slate-50 border-slate-200"
