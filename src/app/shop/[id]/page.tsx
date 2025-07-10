@@ -74,7 +74,7 @@ export default function ProductPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="max-w-4xl mx-auto py-0 px-6 space-y-8">
+      <div className="max-w-screen-lg mx-auto py-0 px-2 space-y-8">
         {/* Back Button */}
         <Button 
   variant="ghost" 
