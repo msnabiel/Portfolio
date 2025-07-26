@@ -24,9 +24,7 @@ export const DATA = {
     "Typescript"
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/shop", icon: ShoppingCart, label: "Shop" },
-    { href: "/cart", icon: ShoppingBag, label: "Cart" },
+    { href: "/", icon: HomeIcon, label: "Home" }
   ],
   contact: {
     email: "msyednabiel@gmail.com",
