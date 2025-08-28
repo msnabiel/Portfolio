@@ -9,7 +9,7 @@ export const DATA = {
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/Chennai",
   description:
-    "A Penultimate year, Electronics Engineering Student. I love building things and helping people. Very active on Linkedin.",
+    "A Final year, Electronics Engineering Student. I love building things and helping people. Very active on Linkedin.",
   summary:
     "Currently, I am pursuing a degree in Electronics and Communication at VIT Chennai, expected to graduate in 2026. In the past, [I have participated in over 5+ hackathons](/#hackathons), [interned at Tech Giant SHARP](#experience), and [contributed to more than 25+ projects](#projects).",
   avatarUrl: "/me.png",
@@ -299,7 +299,7 @@ export const DATA = {
     },
     {
       title: "DeFy ",
-      dates: "September 14th - 16th, 2018",
+      dates: "January 29th, 2024",
       location: "Chennai, India",
       description:
         "Developed a blockchain-based supply chain management system with crowdfunding integration, designed to aid NGOs and support humanitarian efforts. It ensures transparency and security in both logistics and fundraising.",
