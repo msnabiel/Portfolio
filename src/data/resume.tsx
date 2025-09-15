@@ -288,12 +288,7 @@ export const DATA = {
         {
           title: "GitHub",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
-        },
-        {
-          title: "Linkedin",
-          icon: <Icons.linkedin className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/CarbonWallet",
+          href: "https://github.com/msnabiel/Docura",
         },
         ],
     },
