@@ -275,6 +275,28 @@ export const DATA = {
     },
   ],
   hackathons: [
+        {
+      title: "HackRX 6.0",
+      dates: "August 22nd - 23rd 2025",
+      location: "Bengaluru, India",
+      description:
+        "Built a context-aware Agentic RAG chatbot with FAISS, Gemini API, and SentenceTransformers, hybrid vector retrieval (dense + sparse + re-ranking), caching, and autonomous API invocation using FastAPI and Next.js.",
+      image:
+        "/bajaj.png",
+      /*mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",*/
+      links: [
+        {
+          title: "GitHub",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
+        },
+        {
+          title: "Linkedin",
+          icon: <Icons.linkedin className="h-4 w-4" />,
+          href: "https://github.com/Wallet6/CarbonWallet",
+        },
+        ],
+    },
     {
       title: "HackRX 5.0",
       dates: "October 12th - 14th, 2024",
