@@ -18,10 +18,20 @@ export const DATA = {
     "Swift",
     "Java",
     "C++",
+    "JavaScript",
+    "TypeScript",
     "React",
     "Node.js",
     "Next.js",
-    "Typescript"
+    "Claude Code",
+    "Cursor",
+    "Docker",
+    "Git",
+    "CI/CD",
+    "MySQL",
+    "Supabase",
+    "Shadcn/UI",
+    "SentenceTransformers"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" }
@@ -68,6 +78,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Parsewave AI",
+      href: "https://parsewave.ai/",
+      badges: [],
+      location: "San Francisco, USA",
+      title: "Software Developer",
+      logoUrl: "/parsewave.png",
+      start: "November 2025",
+      end: "February 2026",
+      description:
+        "Built a Dockerized, reproducible workflow system to benchmark latest SOTA LLMs (OpenAI, Anthropic models) across accuracy and real-world task performance metrics.",
+    },
     {
       company: "SHARP Software Development India",
       href: "https://www.sharp.co.in/",
@@ -176,6 +198,109 @@ export const DATA = {
     },*/
   ],
   projects: [
+    {
+      title: "The OpenRole",
+      href: "https://theopenrole.com",
+      dates: "June 2025 - Present",
+      tags: ["SaaS", "Full-stack", "Job Platform"],
+      active: true,
+      description:
+        "Built **The OpenRole**, a job platform that discovers curated opportunities matched to user profiles. Features **job application tracking**, **analytics dashboard**, **job posting** for recruiters, and **web push notifications**. iOS app in development with **APNs integration**.",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "TypeScript",
+        "Web Push API",
+        "SwiftUI (iOS)",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://theopenrole.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/openrole.png",
+      video: "",
+    },
+    {
+      title: "Glide",
+      href: "https://glidexapp.vercel.app/",
+      dates: "January 2026",
+      tags: ["iOS", "DeFi", "Solana"],
+      active: true,
+      description:
+        "Built **Glide for iPhone**, a native Solana DeFi app for managing portfolios, swapping tokens, and tracking activity. Powered by **Jupiter** with a **local-first** approach to data privacy. Features familiar iOS patterns, crisp typography, and smooth performance.",
+      technologies: [
+        "SwiftUI",
+        "Solana",
+        "Jupiter",
+        "CoreData",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://glidexapp.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/us/app/glidex/id6763604230",
+          icon: <ShoppingBag className="size-3" />,
+        },
+      ],
+      image: "/glide-app.png",
+      video: "",
+    },
+    {
+      title: "VIT Connect",
+      href: "https://apps.apple.com/us/app/vit-connect/id6764813035",
+      dates: "December 2025",
+      tags: ["iOS", "Social", "University"],
+      active: true,
+      description:
+        "Developed **VIT Connect for iPhone**, a campus companion app with familiar iOS patterns and calm layout. Quick access to essential tools with thoughtful details and performance that stays smooth all day.",
+      technologies: [
+        "SwiftUI",
+        "CoreData",
+        "Networking",
+      ],
+      links: [
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/us/app/vit-connect/id6764813035",
+          icon: <ShoppingBag className="size-3" />,
+        },
+      ],
+      image: "/vitconnect.png",
+      video: "",
+    },
+    {
+      title: "E-commerce Platform",
+      href: "https://nabiel-co.vercel.app/",
+      dates: "July 2025",
+      tags: ["Full-stack", "SaaS", "E-commerce"],
+      active: true,
+      description:
+        "Built a full-stack **e-commerce platform** with **cart management**, **product filtering**, and responsive UI using **ShadCN components**. Integrated **Razorpay** for secure payments and **Supabase** for order tracking and data storage. Deployed on **Vercel** with **SEO-optimized routing** and high-performance serverless backend.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "ShadCN UI",
+        "Razorpay",
+        "Supabase",
+        "PostgreSQL",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://nabiel-co.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/ecommerce.png",
+      video: "",
+    },
     {
       title: "RX-Asisstant ",
       href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
@@ -702,5 +827,48 @@ export const DATA = {
         },
       ],
     },*/
+  ],
+  achievements: [
+    {
+      title: "Patent: Smart Health Prediction System for underground miners",
+      date: "2025",
+      description: "Co-inventor, Publication No. 202541072105",
+    },
+    {
+      title: "BajajFinserv HackRX 5.0 & 6.0 Finalist",
+      date: "2024, 2025",
+      description: "Selected among 1000+ participants. Pune & Bengaluru, India",
+    },
+    {
+      title: "Top 30 Finalist - DeFy Hackathon",
+      date: "2024",
+      description: "Top 30 out of 700 participants for DeFy hackathon conducted by VIT Chennai with Devfolio",
+    },
+  ],
+  certifications: [
+    {
+      title: "Machine Learning Specialization",
+      issuer: "Stanford Online | DeepLearning.AI",
+      date: "",
+      link: "",
+    },
+    {
+      title: "Introduction to Machine Learning in Production",
+      issuer: "DeepLearning.AI",
+      date: "",
+      link: "",
+    },
+    {
+      title: "Natural Language Processing with Classification and Vector Spaces",
+      issuer: "DeepLearning.AI",
+      date: "",
+      link: "",
+    },
+    {
+      title: "Microsoft Azure Fundamentals AI-900",
+      issuer: "Microsoft",
+      date: "",
+      link: "",
+    },
   ],
 } as const;

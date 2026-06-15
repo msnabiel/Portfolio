@@ -240,10 +240,47 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Achievements */}
+        <section id="achievements">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 16}>
+              <h2 className="text-xl font-bold">Achievements</h2>
+            </BlurFade>
+            {DATA.achievements.map((achievement, id) => (
+              <BlurFade key={achievement.title} delay={BLUR_FADE_DELAY * 17 + id * 0.05}>
+                <div className="flex flex-col space-y-1.5 rounded-lg border p-4">
+                  <div className="flex items-start justify-between">
+                    <h3 className="font-semibold leading-none">{achievement.title}</h3>
+                    <time className="text-xs text-muted-foreground">{achievement.date}</time>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section id="certifications">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 18}>
+              <h2 className="text-xl font-bold">Certifications</h2>
+            </BlurFade>
+            {DATA.certifications.map((cert, id) => (
+              <BlurFade key={cert.title} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
+                <div className="flex flex-col space-y-1.5 rounded-lg border p-4">
+                  <h3 className="font-semibold leading-none">{cert.title}</h3>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </section>
+
         {/* Contact */}
         <section id="contact">
           <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-            <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <BlurFade delay={BLUR_FADE_DELAY * 20}>
               <div className="space-y-3">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Contact
