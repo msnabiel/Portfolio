@@ -44,35 +44,49 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  return (
-    <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
+  const renderMainContent = (
+    children: React.ReactNode,
+    contentClassName: string
+  ) =>
+    href ? (
       <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        href={href}
+        className={cn(contentClassName, "cursor-pointer")}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
-          />
-        )}
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
+        {children}
       </Link>
-      
+    ) : (
+      <div className={contentClassName}>{children}</div>
+    );
+
+  const media = (
+    <>
+      {video && (
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+        />
+      )}
+      {image && (
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={300}
+          className="h-40 w-full overflow-hidden object-cover object-top"
+        />
+      )}
+    </>
+  );
+
+  const details = (
+    <>
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
@@ -85,11 +99,11 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      
+
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
+            {tags.map((tag) => (
               <Badge
                 className="px-1 py-0 text-[10px]"
                 variant="secondary"
@@ -101,6 +115,15 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
+    </>
+  );
+
+  return (
+    <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
+      {(video || image) &&
+        renderMainContent(media, cn("block", className))}
+
+      {renderMainContent(details, "flex flex-1 flex-col")}
       
       <CardFooter className="px-2 pb-2">
         {links && links.length > 0 && (

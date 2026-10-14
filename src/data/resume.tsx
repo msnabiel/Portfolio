@@ -9,9 +9,9 @@ export const DATA = {
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/Chennai",
   description:
-    "A Final year, Electronics Engineering Student. I love building things and helping people. Very active on Linkedin.",
+    "Technical Consultant at Perficient. I enjoy building useful software and helping people, with a background in Electronics and Communication Engineering at VIT Chennai.",
   summary:
-    "Currently, I am pursuing a degree in Electronics and Communication at VIT Chennai, expected to graduate in 2026. In the past, [I have participated in over 5+ hackathons](/#hackathons), [interned at Tech Giant SHARP](#experience), and [contributed to more than 25+ projects](#projects).",
+    "I’m a Technical Consultant at Perficient. I studied Electronics and Communication Engineering at VIT Chennai. Previously, I [interned at SHARP](#work), [participated in 5+ hackathons](/#hackathons), and [contributed to 25+ projects](#projects).",
   avatarUrl: "/me.png",
   skills: [
     "Python",
@@ -78,6 +78,17 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Perficient",
+      href: "https://www.perficient.com/",
+      badges: [],
+      location: "India",
+      title: "Technical Consultant",
+      logoUrl: "/perficient_india_logo.jpeg",
+      start: "September 2026",
+      end: "Present",
+      description: "",
+    },
     {
       company: "Parsewave AI",
       href: "https://parsewave.ai/",
@@ -225,7 +236,7 @@ export const DATA = {
     },
     {
       title: "Glide",
-      href: "https://glidexapp.vercel.app/",
+      href: "https://apps.apple.com/us/app/glidex/id6763604230",
       dates: "January 2026",
       tags: ["iOS", "DeFi", "Solana"],
       active: true,
@@ -239,17 +250,31 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://glidexapp.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "App Store",
           href: "https://apps.apple.com/us/app/glidex/id6763604230",
           icon: <ShoppingBag className="size-3" />,
         },
       ],
       image: "/glide-app.png",
+      video: "",
+    },
+    {
+      title: "CueFlow: Creator Studio",
+      href: "https://apps.apple.com/in/app/cueflow-creator-studio/id6780352605?mt=12",
+      dates: "2026",
+      tags: ["macOS", "Creator Studio"],
+      active: true,
+      description:
+        "CueFlow: Creator Studio, available on the Mac App Store.",
+      technologies: ["macOS"],
+      links: [
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/in/app/cueflow-creator-studio/id6780352605?mt=12",
+          icon: <ShoppingBag className="size-3" />,
+        },
+      ],
+      image: "",
       video: "",
     },
     {
@@ -270,6 +295,11 @@ export const DATA = {
           type: "App Store",
           href: "https://apps.apple.com/us/app/vit-connect/id6764813035",
           icon: <ShoppingBag className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/msnabiel/vit-connect",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/vitconnect.png",
@@ -302,52 +332,41 @@ export const DATA = {
       video: "",
     },
     {
-      title: "RX-Asisstant ",
-      href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
-      dates: "October 12th - 14th 2024",
+      title: "Docura",
+      href: "https://github.com/msnabiel/Docura",
+      dates: "August 2025",
       tags: ["SaaS", "Hackathon", "AI"],
       active: true,
       description:
-        "With the release of the ChromaDB, I built **RX-Assistant**, a **SaaS** that uses a RESTful API and Chainlit **RAG chatbot** to extract information from documents using OCR. It **supports actions** like order creation and features a **multilingual** conversational interface powered by **Flan-T5** and **Gemini**.",
+        "Built a context-aware **Agentic RAG chatbot** with hybrid retrieval, reranking, caching, and autonomous API invocation to answer questions over documents.",
       technologies: [
         "Python",
-        "ChromaDB",
+        "FastAPI",
+        "FAISS",
         "Google Gemini",
-        "Chainlit",
+        "Next.js",
       ],
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
+          href: "https://github.com/msnabiel/Docura",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/ss.png",
+      image: "/bajaj.png",
       video:
         "",
     },
     {
-      title: "iVision",
-      href: "https://github.com/msnabiel/iVision",
-      dates: "July 2024",
-      tags: ["SaaS", "Hackathon", "AI"],
+      title: "Perficient Capstone 01: Hospital Management System",
+      dates: "2026",
+      tags: ["Perficient", "Capstone", "Healthcare"],
       active: true,
       description:
-        "Developed an **iOS app** that integrates **image classification** using **CoreML and Google Generative AI (Gemini)** for generating responses based on user queries and images.",
-      technologies: [
-        "SwiftUI",
-        "CoreML",
-        "CoreData",
-        "Google Gemini",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/msnabiel/iVision",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/ivision.png",
+        "Hospital Management System built as part of Perficient Capstone 01.",
+      technologies: [],
+      links: [],
+      image: "",
       video: "",
     },
     {
@@ -829,6 +848,12 @@ export const DATA = {
     },*/
   ],
   achievements: [
+    {
+      title: "Open-source contribution to Apple coreai-models",
+      date: "2026",
+      description:
+        "Opened [issue #144](https://github.com/apple/coreai-models/issues/144), proposing int8 KV cache quantization for roughly 2× lower cache memory use. The issue is closed.",
+    },
     {
       title: "Patent: Smart Health Prediction System for underground miners",
       date: "2025",

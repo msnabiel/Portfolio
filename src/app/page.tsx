@@ -253,7 +253,9 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">{achievement.title}</h3>
                     <time className="text-xs text-muted-foreground">{achievement.date}</time>
                   </div>
-                  <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                  <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+                    {achievement.description}
+                  </Markdown>
                 </div>
               </BlurFade>
             ))}
