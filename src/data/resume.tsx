@@ -88,7 +88,7 @@ export const DATA = {
       start: "September 2026",
       end: "Present",
       description:
-        "Learned about common production scenarios and how Python, SQL, and NumPy can be used in them, then practiced applying these skills through capstone projects.",
+        "Learned about production scenarios and how Python, SQL, and NumPy can be used in them, then practiced applying these skills through capstone projects.",
     },
     {
       company: "Parsewave AI",
