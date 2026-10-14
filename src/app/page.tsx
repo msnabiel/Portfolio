@@ -248,12 +248,24 @@ export default function Page() {
             </BlurFade>
             {DATA.achievements.map((achievement, id) => (
               <BlurFade key={achievement.title} delay={BLUR_FADE_DELAY * 17 + id * 0.05}>
-                <div className="flex flex-col space-y-1.5 rounded-lg border p-4">
-                  <div className="flex items-start justify-between">
-                    <h3 className="font-semibold leading-none">{achievement.title}</h3>
-                    <time className="text-xs text-muted-foreground">{achievement.date}</time>
+                <div className="flex items-start gap-3 rounded-lg border p-4">
+                  <Avatar className="size-11 shrink-0 border bg-muted">
+                    {achievement.logoUrl && (
+                      <AvatarImage src={achievement.logoUrl} alt="" className="object-cover" />
+                    )}
+                    <AvatarFallback className="text-xs font-semibold">
+                      {achievement.logoText ?? "★"}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex min-w-0 flex-1 flex-col space-y-1.5">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="font-semibold leading-snug">{achievement.title}</h3>
+                      <time className="shrink-0 text-xs text-muted-foreground">{achievement.date}</time>
+                    </div>
+                    <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+                      {achievement.description}
+                    </Markdown>
                   </div>
-                  <p className="text-sm text-muted-foreground">{achievement.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -268,9 +280,19 @@ export default function Page() {
             </BlurFade>
             {DATA.certifications.map((cert, id) => (
               <BlurFade key={cert.title} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
-                <div className="flex flex-col space-y-1.5 rounded-lg border p-4">
-                  <h3 className="font-semibold leading-none">{cert.title}</h3>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                <div className="flex items-start gap-3 rounded-lg border p-4">
+                  <Avatar className="size-11 shrink-0 border bg-muted">
+                    {cert.logoUrl && (
+                      <AvatarImage src={cert.logoUrl} alt="" className="object-cover" />
+                    )}
+                    <AvatarFallback className="text-xs font-semibold">
+                      {cert.logoText ?? cert.issuer.slice(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex min-w-0 flex-1 flex-col space-y-1.5">
+                    <h3 className="font-semibold leading-snug">{cert.title}</h3>
+                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  </div>
                 </div>
               </BlurFade>
             ))}

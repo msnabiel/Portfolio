@@ -9,9 +9,9 @@ export const DATA = {
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/Chennai",
   description:
-    "A Final year, Electronics Engineering Student. I love building things and helping people. Very active on Linkedin.",
+    "Technical Consultant at Perficient. I enjoy building useful software and helping people, with a background in Electronics and Communication Engineering at VIT Chennai.",
   summary:
-    "Currently, I am pursuing a degree in Electronics and Communication at VIT Chennai, expected to graduate in 2026. In the past, [I have participated in over 5+ hackathons](/#hackathons), [interned at Tech Giant SHARP](#experience), and [contributed to more than 25+ projects](#projects).",
+    "I’m a Technical Consultant at Perficient. I studied Electronics and Communication Engineering at VIT Chennai. Previously, I [interned at SHARP](#work), [participated in 5+ hackathons](/#hackathons), and [contributed to 25+ projects](#projects).",
   avatarUrl: "/me.png",
   skills: [
     "Python",
@@ -78,6 +78,17 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Perficient",
+      href: "https://www.perficient.com/",
+      badges: [],
+      location: "India",
+      title: "Technical Consultant",
+      logoUrl: "/perficient_india_logo.jpeg",
+      start: "September 2026",
+      end: "Present",
+      description: "",
+    },
     {
       company: "Parsewave AI",
       href: "https://parsewave.ai/",
@@ -169,8 +180,8 @@ export const DATA = {
       href: "https://vit.ac.in",
       degree: "Electronics and Communication Engineering",
       logoUrl: "/VIT.png",
-      start: "2022",
-      end: "2026",
+      start: "July 2022",
+      end: "August 2026",
     },
     {
       school: "Sunshine School of Institutions",
@@ -199,6 +210,30 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Perficient Capstone 01: Transaction Data Analysis & Visualization",
+      dates: "2026",
+      tags: ["Perficient", "Capstone", "Data Analysis"],
+      active: true,
+      description:
+        "Analyzed transaction data and created visualizations to highlight patterns and communicate useful insights.",
+      technologies: [],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Perficient Capstone 0: Hospital Management System",
+      dates: "2026",
+      tags: ["Perficient", "Capstone", "Healthcare"],
+      active: true,
+      description:
+        "A hospital management system developed as part of Perficient Capstone 0.",
+      technologies: [],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
       title: "The OpenRole",
       href: "https://theopenrole.com",
       dates: "June 2025 - Present",
@@ -225,7 +260,7 @@ export const DATA = {
     },
     {
       title: "Glide",
-      href: "https://glidexapp.vercel.app/",
+      href: "https://apps.apple.com/us/app/glidex/id6763604230",
       dates: "January 2026",
       tags: ["iOS", "DeFi", "Solana"],
       active: true,
@@ -239,17 +274,31 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://glidexapp.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "App Store",
           href: "https://apps.apple.com/us/app/glidex/id6763604230",
           icon: <ShoppingBag className="size-3" />,
         },
       ],
       image: "/glide-app.png",
+      video: "",
+    },
+    {
+      title: "CueFlow: Creator Studio",
+      href: "https://apps.apple.com/in/app/cueflow-creator-studio/id6780352605?mt=12",
+      dates: "2026",
+      tags: ["macOS", "Creator Studio"],
+      active: true,
+      description:
+        "Turn your Mac into a studio-grade teleprompter. CueFlow helps creators and presenters deliver naturally while looking into the camera, with smooth adjustable auto-scroll, live script overlays while recording, manual scroll control, custom text styling, and mirror mode. Organize scripts into collections, then export to PDF or SRT. CueFlow Pro adds unlimited scripts, 1080p and 4K recording, and delivery analytics.",
+      technologies: ["macOS"],
+      links: [
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/in/app/cueflow-creator-studio/id6780352605?mt=12",
+          icon: <ShoppingBag className="size-3" />,
+        },
+      ],
+      image: "/cueflow.webp",
       video: "",
     },
     {
@@ -270,6 +319,11 @@ export const DATA = {
           type: "App Store",
           href: "https://apps.apple.com/us/app/vit-connect/id6764813035",
           icon: <ShoppingBag className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/msnabiel/vit-connect",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/vitconnect.png",
@@ -302,53 +356,30 @@ export const DATA = {
       video: "",
     },
     {
-      title: "RX-Asisstant ",
-      href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
-      dates: "October 12th - 14th 2024",
+      title: "Docura",
+      href: "https://github.com/msnabiel/Docura",
+      dates: "August 2025",
       tags: ["SaaS", "Hackathon", "AI"],
       active: true,
       description:
-        "With the release of the ChromaDB, I built **RX-Assistant**, a **SaaS** that uses a RESTful API and Chainlit **RAG chatbot** to extract information from documents using OCR. It **supports actions** like order creation and features a **multilingual** conversational interface powered by **Flan-T5** and **Gemini**.",
+        "Built a context-aware **Agentic RAG chatbot** with hybrid retrieval, reranking, caching, and autonomous API invocation to answer questions over documents.",
       technologies: [
         "Python",
-        "ChromaDB",
+        "FastAPI",
+        "FAISS",
         "Google Gemini",
-        "Chainlit",
+        "Next.js",
       ],
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/msnabiel/RX-Asisstant--HackRX5.0",
+          href: "https://github.com/msnabiel/Docura",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/ss.png",
+      image: "/bajaj.png",
       video:
         "",
-    },
-    {
-      title: "iVision",
-      href: "https://github.com/msnabiel/iVision",
-      dates: "July 2024",
-      tags: ["SaaS", "Hackathon", "AI"],
-      active: true,
-      description:
-        "Developed an **iOS app** that integrates **image classification** using **CoreML and Google Generative AI (Gemini)** for generating responses based on user queries and images.",
-      technologies: [
-        "SwiftUI",
-        "CoreML",
-        "CoreData",
-        "Google Gemini",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/msnabiel/iVision",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/ivision.png",
-      video: "",
     },
     {
       title: "AgroWise",
@@ -830,18 +861,32 @@ export const DATA = {
   ],
   achievements: [
     {
+      title: "Open-source contribution to Apple coreai-models",
+      date: "2026",
+      logoUrl: "",
+      logoText: "GH",
+      description:
+        "Opened [issue #144](https://github.com/apple/coreai-models/issues/144), proposing int8 KV cache quantization for roughly 2× lower cache memory use. The issue is closed.",
+    },
+    {
       title: "Patent: Smart Health Prediction System for underground miners",
       date: "2025",
+      logoUrl: "",
+      logoText: "PT",
       description: "Co-inventor, Publication No. 202541072105",
     },
     {
       title: "BajajFinserv HackRX 5.0 & 6.0 Finalist",
       date: "2024, 2025",
+      logoUrl: "/bajaj.png",
+      logoText: "",
       description: "Selected among 1000+ participants. Pune & Bengaluru, India",
     },
     {
       title: "Top 30 Finalist - DeFy Hackathon",
       date: "2024",
+      logoUrl: "/defy24.png",
+      logoText: "",
       description: "Top 30 out of 700 participants for DeFy hackathon conducted by VIT Chennai with Devfolio",
     },
   ],
@@ -849,24 +894,32 @@ export const DATA = {
     {
       title: "Machine Learning Specialization",
       issuer: "Stanford Online | DeepLearning.AI",
+      logoUrl: "",
+      logoText: "S",
       date: "",
       link: "",
     },
     {
       title: "Introduction to Machine Learning in Production",
       issuer: "DeepLearning.AI",
+      logoUrl: "",
+      logoText: "DL",
       date: "",
       link: "",
     },
     {
       title: "Natural Language Processing with Classification and Vector Spaces",
       issuer: "DeepLearning.AI",
+      logoUrl: "",
+      logoText: "DL",
       date: "",
       link: "",
     },
     {
       title: "Microsoft Azure Fundamentals AI-900",
       issuer: "Microsoft",
+      logoUrl: "/msft.png",
+      logoText: "",
       date: "",
       link: "",
     },
