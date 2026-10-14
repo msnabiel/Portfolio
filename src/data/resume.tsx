@@ -867,7 +867,8 @@ export const DATA = {
       logoUrl: "/apple-logo.svg",
       logoText: "",
       description:
-        "Opened [issue #144](https://github.com/apple/coreai-models/issues/144), proposing int8 KV cache quantization for roughly 2× lower cache memory use. The issue is closed.",
+        "Opened issue #144 proposing int8 KV cache quantization for roughly 2× lower cache memory use. The issue is closed.",
+      issueUrl: "https://github.com/apple/coreai-models/issues/144",
     },
     {
       title: "Patent: Smart Health Prediction System for underground miners",

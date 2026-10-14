@@ -246,12 +246,12 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
               <h2 className="text-xl font-bold">Achievements</h2>
             </BlurFade>
-            {DATA.achievements.map((achievement, id) => (
-              <BlurFade key={achievement.title} delay={BLUR_FADE_DELAY * 17 + id * 0.05}>
+            {DATA.achievements.map((achievement, id) => {
+              const card = (
                 <div className="flex items-start gap-3 rounded-lg border p-4">
                   <Avatar className="size-11 shrink-0 border bg-muted">
                     {achievement.logoUrl && (
-                      <AvatarImage src={achievement.logoUrl} alt="" className="object-cover" />
+                      <AvatarImage src={achievement.logoUrl} alt="" className="object-contain" />
                     )}
                     <AvatarFallback className="text-xs font-semibold">
                       {achievement.logoText ?? "★"}
@@ -267,8 +267,26 @@ export default function Page() {
                     </Markdown>
                   </div>
                 </div>
-              </BlurFade>
-            ))}
+              );
+
+              return (
+                <BlurFade key={achievement.title} delay={BLUR_FADE_DELAY * 17 + id * 0.05}>
+                  {"issueUrl" in achievement ? (
+                    <Link
+                      href={achievement.issueUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      aria-label={`Open GitHub issue for ${achievement.title}`}
+                    >
+                      {card}
+                    </Link>
+                  ) : (
+                    card
+                  )}
+                </BlurFade>
+              );
+            })}
           </div>
         </section>
 
