@@ -87,7 +87,8 @@ export const DATA = {
       logoUrl: "/perficient_india_logo.jpeg",
       start: "September 2026",
       end: "Present",
-      description: "",
+      description:
+        "Built skills in Python, SQL, and NumPy, and applied them to production system use cases through capstone projects.",
     },
     {
       company: "Parsewave AI",
@@ -123,7 +124,7 @@ export const DATA = {
       start: "February 2024",
       end: "September 2024",
       description:
-        "I revolutionised resume analysis by designing and deploying a sophisticated AI/ML-powered document answering system, enhancing Retrieval-Augmented Generation (RAG) capabilities and reducing query resolution time by 20%. Additionally, I enhanced Streamlit application performance and user experience by 15% through interface optimization, reducing API requests by prompt tuning, and ensuring seamless integration with the Gemini API.",
+        "Contributed to an AI/ML-powered document Q&A system for resume analysis, improving Retrieval-Augmented Generation (RAG) and reducing query resolution time by 20%. Also improved the Streamlit app’s performance and usability by 15% through interface updates, prompt tuning to reduce API requests, and Gemini API integration.",
     },
     /*{
       company: "Nvidia",
@@ -863,8 +864,8 @@ export const DATA = {
     {
       title: "Open-source contribution to Apple coreai-models",
       date: "2026",
-      logoUrl: "",
-      logoText: "GH",
+      logoUrl: "/apple-logo.svg",
+      logoText: "",
       description:
         "Opened [issue #144](https://github.com/apple/coreai-models/issues/144), proposing int8 KV cache quantization for roughly 2× lower cache memory use. The issue is closed.",
     },
