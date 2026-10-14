@@ -251,7 +251,7 @@ export default function Page() {
                 <div className="flex items-start gap-3 rounded-lg border p-4">
                   <Avatar className="size-11 shrink-0 border bg-muted">
                     {achievement.logoUrl && (
-                      <AvatarImage src={achievement.logoUrl} alt="" className="object-contain" />
+                      <AvatarImage src={achievement.logoUrl} alt="" className="object-fill" />
                     )}
                     <AvatarFallback className="text-xs font-semibold">
                       {achievement.logoText ?? "★"}
