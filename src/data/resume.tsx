@@ -210,6 +210,30 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Perficient Capstone 01: Transaction Data Analysis & Visualization",
+      dates: "2026",
+      tags: ["Perficient", "Capstone", "Data Analysis"],
+      active: true,
+      description:
+        "Analyzed transaction data and created visualizations to highlight patterns and communicate useful insights.",
+      technologies: [],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Perficient Capstone 0: Hospital Management System",
+      dates: "2026",
+      tags: ["Perficient", "Capstone", "Healthcare"],
+      active: true,
+      description:
+        "A hospital management system developed as part of Perficient Capstone 0.",
+      technologies: [],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
       title: "The OpenRole",
       href: "https://theopenrole.com",
       dates: "June 2025 - Present",
@@ -265,7 +289,7 @@ export const DATA = {
       tags: ["macOS", "Creator Studio"],
       active: true,
       description:
-        "CueFlow: Creator Studio, available on the Mac App Store.",
+        "Turn your Mac into a studio-grade teleprompter. CueFlow helps creators and presenters deliver naturally while looking into the camera, with smooth adjustable auto-scroll, live script overlays while recording, manual scroll control, custom text styling, and mirror mode. Organize scripts into collections, then export to PDF or SRT. CueFlow Pro adds unlimited scripts, 1080p and 4K recording, and delivery analytics.",
       technologies: ["macOS"],
       links: [
         {
@@ -274,7 +298,7 @@ export const DATA = {
           icon: <ShoppingBag className="size-3" />,
         },
       ],
-      image: "",
+      image: "/cueflow.webp",
       video: "",
     },
     {
@@ -356,18 +380,6 @@ export const DATA = {
       image: "/bajaj.png",
       video:
         "",
-    },
-    {
-      title: "Perficient Capstone 01: Hospital Management System",
-      dates: "2026",
-      tags: ["Perficient", "Capstone", "Healthcare"],
-      active: true,
-      description:
-        "Hospital Management System built as part of Perficient Capstone 01.",
-      technologies: [],
-      links: [],
-      image: "",
-      video: "",
     },
     {
       title: "AgroWise",
