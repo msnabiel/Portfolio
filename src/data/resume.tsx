@@ -235,31 +235,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "The OpenRole",
-      href: "https://theopenrole.com",
-      dates: "June 2025 - Present",
-      tags: ["SaaS", "Full-stack", "Job Platform"],
-      active: true,
-      description:
-        "Built **The OpenRole**, a job platform that discovers curated opportunities matched to user profiles. Features **job application tracking**, **analytics dashboard**, **job posting** for recruiters, and **web push notifications**. iOS app in development with **APNs integration**.",
-      technologies: [
-        "Next.js",
-        "Supabase",
-        "TypeScript",
-        "Web Push API",
-        "SwiftUI (iOS)",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://theopenrole.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/openrole.png",
-      video: "",
-    },
-    {
       title: "Glide",
       href: "https://apps.apple.com/us/app/glidex/id6763604230",
       dates: "January 2026",
@@ -381,6 +356,31 @@ export const DATA = {
       image: "/bajaj.png",
       video:
         "",
+    },
+    {
+      title: "The OpenRole",
+      href: "https://theopenrole.com",
+      dates: "June 2025 - Present",
+      tags: ["SaaS", "Full-stack", "Job Platform"],
+      active: true,
+      description:
+        "Built **The OpenRole**, a job platform that discovers curated opportunities matched to user profiles. Features **job application tracking**, **analytics dashboard**, **job posting** for recruiters, and **web push notifications**. iOS app in development with **APNs integration**.",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "TypeScript",
+        "Web Push API",
+        "SwiftUI (iOS)",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://theopenrole.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/openrole.png",
+      video: "",
     },
     {
       title: "AgroWise",
