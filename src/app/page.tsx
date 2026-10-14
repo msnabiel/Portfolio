@@ -286,7 +286,7 @@ export default function Page() {
                       <AvatarImage src={cert.logoUrl} alt="" className="object-cover" />
                     )}
                     <AvatarFallback className="text-xs font-semibold">
-                      {cert.logoText ?? cert.issuer.slice(0, 2).toUpperCase()}
+                      {cert.logoText}
                     </AvatarFallback>
                   </Avatar>
                   <div className="flex min-w-0 flex-1 flex-col space-y-1.5">

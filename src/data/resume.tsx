@@ -919,7 +919,7 @@ export const DATA = {
       title: "Microsoft Azure Fundamentals AI-900",
       issuer: "Microsoft",
       logoUrl: "/msft.png",
-      logoText: "",
+      logoText: "MS",
       date: "",
       link: "",
     },
